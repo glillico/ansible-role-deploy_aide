@@ -1,2 +1,10 @@
 ---
 # handlers file for ansible-role-deploy_aide
+
+- name: Initialise aide database
+  ansible.builtin.command: "aide -i -c {{ daid_conf_path }}/{{ daid_conf_name }}"
+  notify:
+    - Rename NEW aide database
+
+- name: Rename NEW aide database
+  ansible.builtin.command: "mv {{ daid_db_path }}/{{ daid_new_db_name }} {{ daid_db_path }}/{{ daid_db_name }}"
