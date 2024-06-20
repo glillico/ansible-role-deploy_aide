@@ -1,38 +1,40 @@
-Role Name
-=========
+# Ansible Role : deploy_aide
 
-A brief description of the role goes here.
+[![CI](https://github.com/glillico/ansible-role-deploy_aide/workflows/CI/badge.svg)](https://github.com/glillico/ansible-role-deploy_aide/actions?query=workflow%3ACI)
 
-Requirements
-------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Installs and configures aide.
 
-Role Variables
---------------
+## Requirements
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+None.
 
-Dependencies
-------------
+## Role Variables
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+### defaults Directory
 
-Example Playbook
-----------------
+|Variable|Description|
+|---|---|
+|daid_package_name|The name of the aide package to install.|
+|daid_conf_path|Path to the aide configuration file|
+|daid_conf_name|The name of the aide configuration file|
+|daid_db_path|Path to the aide database file|
+|daid_db_name|The name of the aide database file|
+|daid_new_db_name|The name of a new aide database file|
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+## Dependencies
+
+None.
+## Example Playbook
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - glillico.deploy_aide
 
-License
--------
+## License
 
-BSD
+MIT
 
-Author Information
-------------------
+## Author Information
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Created in 2024 by Graham Lillico.
