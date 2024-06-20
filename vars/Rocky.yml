@@ -1,9 +1,0 @@
----
-# RedHat vars file for deploy_aide
-
-daid_package_name: aide
-daid_conf_path: /etc
-daid_conf_name: aide.conf
-daid_db_path: /var/lib/aide
-daid_db_name: aide.db.gz
-daid_new_db_name: aide.db.new.gz
